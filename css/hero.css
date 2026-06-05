@@ -65,9 +65,9 @@
 }
 
 .loc{
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
   color: #e2e8f0;
   margin-top: 0.5rem;
 }
