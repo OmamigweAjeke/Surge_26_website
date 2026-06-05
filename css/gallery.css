@@ -1,0 +1,153 @@
+.gallery-section {
+    background-color: #551B14;    /* Rich, classic solid Burgundy background */
+    padding: 80px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    overflow: hidden;             /* Defends structural margins against overflow breakouts */
+}
+
+.gallery-container {
+    width: 100%;
+    max-width: 900px;             /* Perfectly scales single frame slide visibility width */
+    text-align: center;
+    position: relative;
+}
+
+.gallery-main-title {
+    color: #ffffff;
+    font-family: 'Neogen', sans-serif;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 200;
+    margin-bottom: 8px;
+    letter-spacing: 3px;
+}
+
+.gallery-subtitle {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1rem;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+/* CAROUSEL VIEWPORT CONTAINER BOUNDARIES */
+.slider-viewport {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;             /* Clips cards outside active frames */
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* THE HARDWARE-ACCELERATED CAROUSEL TRACKER */
+.slider-track {
+    display: flex;
+    width: 100%;
+    cursor: grab;                 /* Gives visual hand indicator cue for swipe actions */
+    user-select: none;
+    will-change: transform;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slider-track:active {
+    cursor: grabbing;             /* Changes hand indicator variant during active holds */
+}
+
+/* EXCLUSIVE SINGLE CARD STRUCTURAL MATRICES */
+.slide-card {
+    min-width: 100%;              /* Forces exactly 1 card to consume the viewport window frame */
+    position: relative;
+    aspect-ratio: 16 / 9;         /* High-end cinematic projection aspect layout ratio */
+    overflow: hidden;
+}
+
+.slide-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;         /* Blocks hardware image drags from crashing mobile touch vectors */
+}
+
+/* MINT GLASS TEXT CAPTION FLOATS */
+.slide-caption-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(12, 26, 21, 0.9) 0%, rgba(12, 26, 21, 0) 100%);
+    padding: 30px 25px 20px 25px;
+    text-align: left;
+}
+
+.slide-caption-overlay span {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    border-left: 3px solid #16a34a; /* Distinct small Mint accent brand anchor border line */
+    padding-left: 12px;
+}
+
+/* DESKTOP DESCRIPTIVE NAVIGATION ARROWS BUTTONS */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    background: rgba(85, 27, 20, 0.85); /* Burgundy shield backdrop transparent blend */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+}
+
+.slider-arrow:hover {
+    background-color: #ffffff;
+    color: #551B14;               /* Switches vector lines cleanly back to Burgundy */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.arrow-left { left: 15px; }
+.arrow-right { right: 15px; }
+
+/* PAGINATION BULLETS TRACK CONTROLS */
+.slider-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active index element scales up and illuminates in Mint Green! */
+.dot.active {
+    background-color: #00ff88;    /* Pops high-energy neon active indicator */
+    width: 28px;                  /* Premium elongated capsule active effect morph */
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+/* ADAPT RESPONSIVE VIEWPORTS DOWN FOR HANDHELD VIEWS */
+@media (max-width: 768px) {
+    .gallery-section { padding: 50px 15px; }
+    .slider-arrow { display: none; } /* Drop box arrows on touch screens—gestures take over! */
+    .slide-card { aspect-ratio: 4 / 3; } /* Tighter squarer frames for upright smartphones screens */
+}

@@ -1,0 +1,174 @@
+/* BASE SECTION CONTAINER */
+.countdown-section {
+    background-color: #fff;
+    padding: 80px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.countdown-container {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+}
+
+.countdown-title .light-bg-title {
+    color: #0c1a15;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+/* FLIPDOWN FLEXBOARD GRID */
+.flipdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(12px, 3.5vw, 30px);
+    flex-wrap: wrap;
+}
+
+.flip-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 3D PERSPECTIVE FLIP CARD CORE */
+.flip-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: clamp(75px, 18vw, 130px);
+    height: clamp(85px, 20vw, 150px);
+    perspective: 400px; /* Essential for depth perspective of the flip */
+    box-shadow: 0 10px 25px rgba(4, 26, 18, 0.12),
+                0 4px 10px rgba(4, 26, 18, 0.06);
+    border-radius: 12px;
+}
+
+/* CARD SIDE STRUCTURES */
+.card-face {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    background: rgba(22, 163, 74, 0.08);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.card-face .num {
+    color: #16a34a; /* Vibrant neon green glow */
+    font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 0 2px 8px rgba(22, 163, 74, 0.15);
+}
+
+/* STATIC TOP AND BOTTOM HALVES */
+.card-top, .top-flip {
+    top: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom: 1px solid rgba(22, 163, 74, 0.18); /* The centerline slit shadow */
+    align-items: flex-start;
+}
+.card-top .num, .top-flip .num {
+    top: 15%; /* Pushes top half numbers down to center correctly */
+}
+
+.card-bottom, .bottom-flip {
+    bottom: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    align-items: flex-end;
+}
+.card-bottom .num, .bottom-flip .num {
+    bottom: 10%; /* Pulls lower numbers up to center correctly */
+}
+
+/* ANIMATING INTERIOR PANELS */
+.flip-inner {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.top-flip {
+    top: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    align-items: flex-start;
+    transform-origin: bottom;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.top-flip .num { top: 20%; }
+
+.bottom-flip {
+    bottom: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    align-items: flex-end;
+    transform-origin: top;
+    transform: rotateX(90deg); /* Hidden flat by default */
+}
+.bottom-flip .num { bottom: 20%; }
+
+.flip-inner {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.top-flip { transform-origin: bottom; }
+.bottom-flip {
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+/* TRIGGERS FOR RUNNING FLIP ANIMATIONS */
+.flip-animate .top-flip {
+    animation: flipTop 0.4s ease-in forwards;
+}
+
+.flip-animate .bottom-flip {
+    animation: flipBottom 0.4s ease-out 0.4s forwards;
+}
+
+@keyframes flipTop {
+    100% { transform: rotateX(-90deg); }
+}
+
+@keyframes flipBottom {
+    100% { transform: rotateX(0deg); }
+}
+
+/* SUBTITLES BELOW BLOCKS */
+.time-label {
+  color: #475569;               /* Slate gray for professional readability on white */
+  font-size: clamp(0.75rem, 2vw, 0.95rem);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE LAYOUT MATRIX FOR THE CARD BREAKPOINT COLLAPSE */
+@media (max-width: 480px) {
+  .countdown-section { padding: 50px 15px; }
+  .flipdown-timer { gap: 10px; }
+  .flipdown-timer {gap: 10px;}
+  .flip-card {border-radius: 8px;}
+  .card-top, .top-flip { border-radius: 8px 8px 0 0}
+  .card-bottom, .bottom-flip { border-radius: 0 0 8px 8px;}
+}

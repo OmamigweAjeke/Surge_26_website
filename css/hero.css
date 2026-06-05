@@ -1,0 +1,238 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 5% 80px 5%;
+  /* Layered Background System matching your composite graphic look */
+  background:
+  radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.2) 0%, transparent 70%),
+  radial-gradient(circle at 80% 70%, rgba(4, 47, 31, 0.4) 0%, transparent 70%),
+  linear-gradient(180deg, rgba(3, 28, 18, 0.7) 0%, rgba(3, 28, 18, 0.9) 100%),
+  url('../img/girls.jpeg') no-repeat center center/cover;
+  overflow: hidden;
+}
+
+/* Decorative Geometric Dot Overlay */
+.dot-grid {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 100px;
+    height: 150px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px);
+    background-size: 15px 15px;
+    pointer-events: none;
+}
+
+/* --- GLASSMORPHISM CARD --- */
+.glass-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 28px;
+    padding: 3rem 4rem;
+    max-width: 720px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+
+    /* Strong Glassmorphism Filters */
+    backdrop-filter: blur(15px) saturate(130%);
+    -webkit-backdrop-filter: blur(15px) saturate(130%);
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.main-title {
+  font-family: 'ExcessV', sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 400;
+  letter-spacing: 6px;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.sub-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #e2e8f0;
+    margin-top: 0.5rem;
+}
+
+.ecg-divider {
+  width: 100%;
+  max-width: 220px;            /* Perfect display width inside the glass card */
+  margin: 15px auto 25px auto; /* Centers horizontally and creates breathing space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecg-svg {
+    width: 100%;
+    height: auto;
+    /* Applies a rich visual neon aura glow behind the entire element */
+    filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.6));
+}
+
+/* THE PULSE LINE MECHANIC (The Heartbeat Loop) */
+.ecg-pulse {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+
+    /* 🚀 THE ANIMATION ENGINE
+       Runs continuously every 3 seconds to push the green surge wave across the path
+    */
+    animation: runHeartbeat 3s linear infinite;
+}
+
+/* Faint background line matching the layout image */
+.ecg-track {stroke-width: 2px;}
+
+/* Keyframes calculation to slide the dash stroke seamlessly */
+@keyframes runHeartbeat {
+    0% {stroke-dashoffset: 600;}
+    50% {stroke-dashoffset: 0;}
+    100% {stroke-dashoffset: -600}
+}
+
+.date-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.date-container i {
+    color: var(--light-green);
+}
+
+.description {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.date {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+
+    /* NEW: Forces the icon and text onto the same line and spaces them nicely */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.date-icon{
+  color: #00ff88;
+  display: inline-block;
+  text-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+
+  font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+  margin-right: clamp(8px, 1.5vw, 15px) !important;
+}
+.hero-btn {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    text-decoration: none;
+    padding: 16px 0px;
+
+    /* NEW: Flipped text color to deep dark green for sharp, premium contrast */
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-radius: 50px;
+
+    /* NEW: Vibrant gradient background mimicking the UI layout graphic */
+    background: linear-gradient(135deg, #00ff88 0%, #22c55e 100%);
+    border: none;
+
+    /* NEW: Soft emerald glow around the button */
+    box-shadow: 0 8px 20px rgba(0, 255, 136, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+}
+
+/* Hover and Animation States */
+.hero-btn:hover {
+    /* NEW: Lift up and expand slightly */
+    transform: translateY(-3px) scale(1.03);
+
+    /* NEW: Makes the glow intense when hovered */
+    box-shadow: 0 12px 28px rgba(0, 255, 136, 0.5);
+    filter: brightness(1.1);
+}
+
+.hero-btn:active {
+    /* Sinks button slightly back down when clicked */
+    transform: translateY(-1px) scale(1);
+}
+
+
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Laptops & Tablets (Landscape) */
+@media (max-width: 1024px) {
+    .main-title { font-size: 4.2rem; }
+    .glass-card { padding: 3rem; max-width: 620px; }
+}
+
+/* Tablets (Portrait) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show mobile hamburger toggle */
+    }
+
+    .glass-card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .main-title { font-size: 3.5rem; }
+    .sub-title { font-size: 0.95rem; letter-spacing: 2px; }
+    .date-container { font-size: 1.3rem; }
+    .hero-btn { width: 100%; justify-content: center; padding: 1rem 2rem; }
+    .date {margin-bottom: 18px; }
+}
+
+/* Small Smart Phones */
+@media (max-width: 480px) {
+  .main-title {
+        letter-spacing: 2.8px; /* Slightly looser tracking for small screen legibility */
+        margin-bottom: 2px;
+        font-weight: 200;
+        font-size: 2.3rem;
+        text-align: justify;
+    }
+    .sub-title {
+      font-size: 0.9rem !important; /* Makes your "UNIBEN PHARMACY CONVENTION" subtitle match perfectly */
+      letter-spacing: 1px !important;
+    }
+
+  .description { font-size: 0.95rem; }
+  .dot-grid { display: none; }
+
+  .register-btn{
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+  .date {letter-spacing: 0.2px;}
+}

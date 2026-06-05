@@ -1,0 +1,110 @@
+.status-section {
+    background-color: #551B14;    /* Rich Burgundy solid banner background */
+    padding: 60px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.status-container {
+    display: flex;
+    gap: clamp(20px, 4vw, 40px);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 850px;
+}
+
+/* INDIVIDUAL GLASS-TINTED COUNTER BLOCKS */
+.counter-card {
+    /* Slight translucent frost to separate cards from the deep burgundy base */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    min-width: 260px;
+    flex: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.counter-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 136, 0.3); /* Vibrant mint line on hover */
+}
+
+/* VECTOR ICON CONTAINERS */
+.counter-icon-wrap {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+.counter-icon-wrap i {
+    color: #00ff88; /* Bright energetic mint icon accent */
+    font-size: 1.5rem;
+}
+
+/* ACTIVE LIVE PULSE EFFECT FOR CURRENT REGISTERING TRACK */
+.counter-icon-wrap.pulsed-glow {
+    background: rgba(0, 255, 136, 0.15);
+    box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4);
+    animation: livePulse 2s infinite;
+}
+
+.counter-icon-wrap.pulsed-glow i {
+    color: #00ff88;
+}
+
+/* THE DIGITAL DISPLAY COUNTER TYPOGRAPHY */
+.counter-number {
+    color: #ffffff; /* Flipped to white for perfect contrast */
+    font-size: clamp(2.5rem, 6vw, 3.2rem);
+    font-weight: 800;
+    margin-bottom: 5px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -1px;
+}
+
+/* SOFT SILVER-WHITE DESCRIPTION LABELS */
+.counter-label {
+    color: rgba(255, 255, 255, 0.8); /* Light silver slate */
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ANIMATION TIMELINES KEYFRAMES */
+@keyframes livePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 12px rgba(0, 255, 136, 0.0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.0);
+    }
+}
+/* STACK CARDS VERTICALLY ON VERY SMALL PHONE SCREENS */
+@media (max-width: 580px) {
+    .status-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .counter-card {
+        width: 100%;
+    }
+}

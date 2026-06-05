@@ -1,0 +1,130 @@
+#foot {
+    /* 🚀 ADJUSTED LIGHTER GREEN:
+       Moving away from the near-black green to a rich, luminous emerald gradient
+    */
+    background: linear-gradient(135deg, #093a29 0%, #144d37 100%);
+
+    color: #ffffff;
+    padding: 60px 20px 20px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Elegant solid Burgundy top accent line to tie back to the pricing section above */
+    border-top: 3px solid #551B14;
+}
+
+.ft-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+/* BRAND COLUMN LAYOUT */
+.ft-brand h3 {
+    font-family: 'AktRegular', serif;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.ft-brand .mint-text {
+    font-family: 'AktRegular', serif;
+    color: #fff;    /* Swapped to high-visibility neon mint green */
+    letter-spacing: 0.5px;
+    font-weight: 200;
+}
+
+.ft-brand p {
+    font-family: 'ExcessV', sans-serif;
+    color: #cbd5e1;               /* Soft silver-gray for clean readability over the lighter green */
+    font-size: 1.8rem;
+    font-weight: 100;
+    letter-spacing: 6px;
+}
+
+/* SOCIAL CONNECTION WRAPPER */
+.ft-social-wrap h2 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+/* VECTOR SOCIAL ICON CONTAINERS */
+.social-icons a {
+    width: 42px;
+    height: 42px;
+    background-color: rgba(255, 255, 255, 0.06); /* Slightly more opaque glass background */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icons a i {
+    color: #ffffff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* INTERACTIVE HOVER FLIPS: Turns outline to deep Burgundy with a Mint icon! */
+.social-icons a:hover {
+    background-color: #551B14;    /* Changes container background to your main Burgundy */
+    border-color: #551B14;
+    transform: translateY(-4px);  /* Gentle lift animation */
+    box-shadow: 0 8px 20px rgba(85, 27, 20, 0.4);
+}
+
+.social-icons a:hover i {
+    color: #00ff88;               /* Pops icon color to glowing neon mint on hover */
+}
+
+/* COPYRIGHT BASE RUNNER */
+.ft-bottom-bar {
+    width: 100%;
+    max-width: 1100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.ft-bottom-bar p {
+    color: rgba(255, 255, 255, 0.5); /* Semi-transparent white copyright text */
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* MOBILE DEVICE RESPONSIVE ADJUSTMENTS */
+@media (max-width: 680px) {
+    .ft-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    .ft-social-wrap {
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}

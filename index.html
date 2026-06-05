@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" contents="ie=edge">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style_1.css">
+	<title>PANS CONVENTION 2026</title>
+</head>
+
+<body>
+	<header id="head">
+			<!--<h1>SURGE'26</h1>
+			<h3>PANS Convention 2026</h3>
+      <p>Location: University of Benin, Benin City</p>
+      <p>Date: September 13th, 2026</p>-->
+	</header>
+	<nav class="navbar">
+    <!--<div class="logo">
+      <img src="img/logo.jfif" alt="logo" width="50px" class="icon-img">
+    </div>-->
+    <div class="nav-container">
+      <a href="index.html" class="navbar-logo">
+        <img src="img/logo.jfif" alt="logo" class="logo-img">
+        <span class="logo-text">PANS UNIBEN</span>
+      </a>
+
+      <button class="navbar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="navbar-menu">
+  			<li><a href="#" class="active">Home</a></li>
+        <li><a href="#convention-gallery">Gallery</a></li>
+        <li><a href="https://forms.gle/YRe8amqJVUKxWAY87" " class="register-btn">Register</a></li>
+  		</ul>
+    </div>
+	</nav>
+
+  <section class="hero-container">
+      <div class="dot-grid"></div>
+      <div class="glass-card">
+
+        <h1 class="main-title">SURGE'26</h1>
+        <p class="sub-title">UNIBEN PHARMACY CONVENTION</p>
+
+        <div class="ecg-divider">
+					<svg viewBox="0 0 300 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+					class="ecg-svg">
+        		<path d="M0 20H110L115 4L122 36L128 12L133 26L137 20H300"
+						class="ecg-track" stroke="rgba(74, 222, 128, 0.15)"
+						stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        		<path d="M0 20H110L115 4L122 36L128 12L133 26L137 20H300"
+						class="ecg-pulse" stroke="#00ff88" stroke-width="3"
+						stroke-linecap="round" stroke-linejoin="round"/>
+    			</svg>
+        </div>
+
+        <div class="date-container">
+					<p class="date">
+						<i class="fa-regular fa-calendar-days date-icon"></i>Sept 13th, 2026
+					</p>
+        </div>
+
+        <a href="https://forms.gle/YRe8amqJVUKxWAY87" class="hero-btn">
+            <i class="fa-solid fa-user-plus"></i> REGISTER
+        </a>
+      </div>
+		</section>
+
+		<section class="countdown-section">
+    	<div class="countdown-container">
+        <h2 class="countdown-title light-bg-title">The Countdown Has Begun</h2>
+
+				<div class="flipdown-timer">
+        	<!-- Days Flip Block -->
+          <div class="flip-group">
+            <div class="flip-card" id="card-days">
+              <div class="card-face card-top"><span class="num">00</span></div>
+              <div class="card-face card-bottom"><span class="num">00</span></div>
+              <div class="card-face flip-inner top-flip"><span class="num">00</span></div>
+              <div class="card-face flip-inner bottom-flip"><span class="num">00</span></div>
+            </div>
+            <span class="time-label">Days</span>
+          </div>
+
+          <!-- Hours Flip Block -->
+          <div class="flip-group">
+          	<div class="flip-card" id="card-hours">
+              <div class="card-face card-top"><span class="num">00</span></div>
+              <div class="card-face card-bottom"><span class="num">00</span></div>
+              <div class="card-face flip-inner top-flip"><span class="num">00</span></div>
+            	<div class="card-face flip-inner bottom-flip"><span class="num">00</span></div>
+            </div>
+            <span class="time-label">Hours</span>
+          </div>
+
+          <!-- Minutes Flip Block -->
+          <div class="flip-group">
+            <div class="flip-card" id="card-minutes">
+              <div class="card-face card-top"><span class="num">00</span></div>
+              <div class="card-face card-bottom"><span class="num">00</span></div>
+              <div class="card-face flip-inner top-flip"><span class="num">00</span></div>
+              <div class="card-face flip-inner bottom-flip"><span class="num">00</span></div>
+            </div>
+            <span class="time-label">Mins</span>
+          </div>
+
+          <!-- Seconds Flip Block -->
+          <div class="flip-group">
+            <div class="flip-card" id="card-seconds">
+                <div class="card-face card-top"><span class="num">00</span></div>
+                <div class="card-face card-bottom"><span class="num">00</span></div>
+                <div class="card-face flip-inner top-flip"><span class="num">00</span></div>
+                <div class="card-face flip-inner bottom-flip"><span class="num">00</span></div>
+              </div>
+              <span class="time-label">Secs</span>
+            </div>
+        	</div>
+    		</div>
+			</section>
+
+
+			<!-- STATUS SOCIAL PROOF BLOCK -->
+			<section class="status-section">
+	    	<div class="status-container">
+
+				 <!-- Live Counter Card 1 -->
+	       	<div class="counter-card">
+						<div class="counter-icon-wrap">
+							<i class="fa-solid fa-users-check"></i>
+	         	</div>
+	          <!-- The js engine targets data-target to run the count-up loop -->
+	          <h3 class="counter-number" id="live-registered-counter" data-target="0">0</h3>
+	          <p class="counter-label">Registered Participants</p>
+	        </div>
+
+					<!-- Live Counter Card 2 -->
+	        <div class="counter-card">
+	            <div class="counter-icon-wrap pulsed-glow">
+	                <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+	            </div>
+	            <h3 class="counter-number" id="live-registered-counter" data-target="43">0</h3>
+	            <p class="counter-label">Currently Registering</p>
+	        </div>
+	    </div>
+		</section>
+
+		<!--pricing tables-->
+		<section class="pricing-section">
+    <div class="pricing-container">
+        <h2 class="pricing-main-title">Convention Registration Tiers</h2>
+
+        <!-- Tier Group 1: Delegates -->
+        <div class="pricing-tier-wrapper">
+            <span class="category-badge-tier">Delegates</span>
+            <div class="table-responsive-scroll">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Pricing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Early Birds</td>
+                            <td>18k</td>
+                        </tr>
+                        <tr>
+                            <td>Regular Price</td>
+                            <td>20k</td>
+                        </tr>
+                        <tr>
+                            <td>Late Registration</td>
+                            <td>25k</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Tier Group 2: Host School -->
+        <div class="pricing-tier-wrapper">
+            <span class="category-badge-tier">Host School</span>
+            <div class="table-responsive-scroll">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Pricing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Early Birds</td>
+                            <td>16k</td>
+                        </tr>
+                        <tr>
+                            <td>Late Registration</td>
+                            <td>18k</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+	</section>
+
+	<!-- PREMIUM FILTERABLE GALLERY SECTION -->
+	<section class="gallery-section" id="convention-gallery">
+    <div class="gallery-container">
+			<h2 class="gallery-main-title">Gallery Highlights</h2>
+      <p class="gallery-subtitle">Swipe to catch glimpses of previous PANS UNIBEN milestones</p>
+
+			<!-- Slider Viewport Window -->
+			<div class="slider-viewport">
+      <!-- Navigation Arrow Tracks (Hidden on tight mobile screens automatically) -->
+      	<button class="slider-arrow arrow-left" aria-label="Slide Left"><i class="fa-solid fa-chevron-left"></i></button>
+      	<button class="slider-arrow arrow-right" aria-label="Slide Right"><i class="fa-solid fa-chevron-right"></i></button>
+				<!-- The Live Sliding Track Grid Container -->
+      	<div class="slider-track" id="gallery-track">
+        <!-- Slide 1 -->
+					<div class="slide-card">
+          	<img src="img/gallery/Tech.jfif" alt="Tech" draggable="false">
+            <div class="slide-caption-overlay">
+            <span>Tech/Business Summit</span>
+					</div>
+				</div>
+
+				<!-- Slide 2 -->
+        <div class="slide-card">
+          <img src="img/gallery/club.jfif" alt="Rave party" draggable="false">
+          <div class="slide-caption-overlay">
+          	<span>Rave Party</span>
+          </div>
+				</div>
+
+				<!-- Slide 3 -->
+        <div class="slide-card">
+          <img src="img/gallery/culture_2.jfif" alt="Culture Night" draggable="false">
+          <div class="slide-caption-overlay">
+            <span>Culture Night Celebration</span>
+					</div>
+				</div>
+
+				<!-- Slide 4 -->
+        <div class="slide-card">
+          <img src=img/gallery/outreach.jfif alt="Health" draggable="false">
+          <div class="slide-caption-overlay">
+          <span>Health Outreach</span>
+				</div>
+			</div>
+
+			<!-- Slide 5 -->
+      <div class="slide-card">
+        <img src="img/gallery/Sports.jfif" alt="Sports" draggable="false">
+        <div class="slide-caption-overlay">
+          <span>Sport Event</span>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- Dynamic Mint Pagination Dot Navigation Matrix -->
+  	<div class="slider-pagination" id="gallery-pagination">
+  	<!-- JavaScript dynamically renders exactly 5 indicator points here -->
+  	</div>
+	</div>
+</section>
+
+<!-- PREMIUM VARSITY FOOTER LAYOUT -->
+<footer id="foot">
+	<div class="ft-container">
+	<!-- Brand/Convention identifier left column -->
+		<div class="ft-brand">
+			<p>SURGE '26</p>
+			<h3>PANS <span class="mint-text">UNIBEN</span></h3>
+		</div>
+		<!-- Social connection right column -->
+		<div class="ft-social-wrap">
+			<h2>Follow Us</h2>
+			<div class="social-icons">
+				<a href="https://vt.tiktok.com/ZSxccBnHf/" target="_blank" aria-label="TikTok"><i class="fa-brands fa-linkedin-in"></i></a>
+				<a href="https://www.instagram.com/reel/DZDagMQtOJ4/?igsh=M2pia2RxMG13eGp3" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="ft-bottom-bar">
+			<p>&copy; 2026 PANS UNIBEN. All Rights Reserved. Designed for SURGE '26.</p>
+		</div>
+	</footer>
+</body>
+<script src="script.js"></script>
+</html>

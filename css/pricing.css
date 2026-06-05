@@ -1,0 +1,142 @@
+.pricing-section {
+    background-color: #ffffff;    /* Solid white baseline palette surface */
+    padding: 80px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.pricing-container {
+    width: 100%;
+    max-width: 800px;             /* Perfect readability grid layout constraint */
+    margin: 0 auto;
+}
+
+/* MAIN HEADLINE TYPOGRAPHY */
+.pricing-main-title {
+    color: #551B14;               /* Primary Varsity Burgundy anchor */
+    font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 45px;
+    letter-spacing: -0.75px;
+    text-transform: uppercase;
+}
+
+.pricing-tier-wrapper {
+    margin-bottom: 40px;
+}
+
+.pricing-tier-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+/* SEPARATOR CATEGORY TEXT PILLS */
+.category-badge-tier {
+    color: #ffffff;
+    background-color: #551B14;    /* Rich Burgundy badge wrapper */
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(85, 27, 20, 0.15);
+}
+
+/* MOBILE RESPONSIVE SCROLL WRAPPER GATES */
+.table-responsive-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+}
+
+/* CORE INTERIOR TABLE COMPONENT GRID */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(85, 27, 20, 0.12); /* Subtle Burgundy bounding box lines */
+    box-shadow: 0 10px 30px rgba(85, 27, 20, 0.05),
+                0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* THE TABLE THEAD COLUMN CELLS */
+.pricing-table th {
+    background-color: #551B14;    /* Bold solid burgundy header bar */
+    color: #ffffff;               /* High-contrast crisp white labels */
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 18px 24px;
+    text-align: left;
+}
+
+.pricing-table th:last-child {
+    text-align: right;            /* Forces "Pricing" to align perfectly over the right-aligned numbers */
+}
+
+/* THE TABLE TBODY ROW DATA CELLS */
+.pricing-table td {
+    padding: 18px 24px;
+    color: #334155;               /* Charcoal slate for reading text comfort */
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(85, 27, 20, 0.06); /* Intermittent Burgundy separator wire */
+    vertical-align: middle;
+}
+
+/* Clean mathematical alternation row colors */
+.pricing-table tr:nth-child(even) td {
+    background-color: rgba(85, 27, 20, 0.015);
+}
+
+/* MINT GREEN PRICING ACCESS VALUE STRATEGIES */
+.pricing-table td:last-child {
+    color: #334155;              /* Pulls vibrant signature Mint Green to highlight numbers */
+    font-size: 1.15rem;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums; /* Keeps numbers structured */
+    text-align: right;            /* Aligns the prices cleanly to the right */
+}
+
+/* MICRO PROMO DECORATION INDICATOR BLOCKS */
+.promo-pill {
+    background-color: rgba(22, 163, 74, 0.1); /* Transparent light green accent bubble */
+    color: #16a34a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-left: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* SATISFYING INTERACTIVE TRANSLUCENT CELL EFFECTS */
+.pricing-table tbody tr:hover td {
+    background-color: rgba(22, 163, 74, 0.03) !important;
+    transition: background-color 0.2s ease;
+}
+
+/* Clears bottom borders on last element rows */
+.pricing-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* SCREEN ADJUSTMENT BREAKPOINTS FOR MOBILE OVERRIDE PACKS */
+@media (max-width: 480px) {
+    .pricing-section { padding: 50px 15px; }
+    .pricing-table th, .pricing-table td { padding: 14px 16px; }
+    .promo-pill { display: block; margin-left: 0; margin-top: 5px; width: max-content; }
+}
