@@ -64,6 +64,14 @@
     margin-top: 0.5rem;
 }
 
+.loc{
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: #e2e8f0;
+  margin-top: 0.5rem;
+}
+
 .ecg-divider {
   width: 100%;
   max-width: 220px;            /* Perfect display width inside the glass card */
