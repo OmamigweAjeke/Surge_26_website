@@ -100,12 +100,20 @@
 }
 
 /* MINT GREEN PRICING ACCESS VALUE STRATEGIES */
-.pricing-table td:last-child {
+.pricing-table td:nth-child(2) {
     color: #334155;              /* Pulls vibrant signature Mint Green to highlight numbers */
     font-size: 1.15rem;
     font-weight: 400;
     font-variant-numeric: tabular-nums; /* Keeps numbers structured */
     text-align: right;            /* Aligns the prices cleanly to the right */
+}
+
+.pricing-table td:nth-child(3) {
+    color: #334155;              /* A clean, subtle slate gray for dates */
+    font-size: 1.15rem;          /* Slightly more compact for a modern timeline look */
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+    text-align: right;           /* Keeps dates aligned neatly opposite the ticket names */
 }
 
 /* MICRO PROMO DECORATION INDICATOR BLOCKS */
