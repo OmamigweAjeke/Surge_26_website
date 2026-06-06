@@ -112,7 +112,7 @@
     font-size: 1.15rem;          /* Slightly more compact for a modern timeline look */
     font-weight: 400;
     font-variant-numeric: tabular-nums;
-               /* Keeps dates aligned neatly opposite the ticket names */
+     text-align: left;     /* Keeps dates aligned neatly opposite the ticket names */
 }
 
 /* MICRO PROMO DECORATION INDICATOR BLOCKS */
