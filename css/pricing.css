@@ -112,6 +112,7 @@
     font-size: 1.15rem;          /* Slightly more compact for a modern timeline look */
     font-weight: 400;
     font-variant-numeric: tabular-nums;
+    text-align: right;
 }
 
 /* MICRO PROMO DECORATION INDICATOR BLOCKS */
