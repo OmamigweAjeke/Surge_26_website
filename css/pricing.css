@@ -105,7 +105,7 @@
     font-size: 1.15rem;
     font-weight: 400;
     font-variant-numeric: tabular-nums; /* Keeps numbers structured */
-    text-align: right;            /* Aligns the prices cleanly to the right */
+    text-align: center;            /* Aligns the prices cleanly to the right */
 }
 
 .pricing-table td:nth-child(3) {
