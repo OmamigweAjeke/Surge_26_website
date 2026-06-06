@@ -27,10 +27,10 @@
 
 .gallery-subtitle {
     color: rgba(255, 255, 255, 0.75);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-top: 0.5rem;
-    margin-bottom: 40px;
-    font-weight: 500;
+    margin-bottom: 30px;
+    font-weight: 300;
     font-style: italic;
 }
 
