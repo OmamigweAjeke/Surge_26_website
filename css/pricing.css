@@ -81,8 +81,8 @@
 }
 
 .pricing-table th:nth-child(3) {
-    text-align: left;            /* Forces "Pricing" to align perfectly over the right-aligned numbers */
-    padding-left: 80px;
+    text-align: right;            /* Forces "Pricing" to align perfectly over the right-aligned numbers */
+    padding-right: -10px;
 }
 
 /* THE TABLE TBODY ROW DATA CELLS */
