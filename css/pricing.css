@@ -82,7 +82,6 @@
 
 .pricing-table th:nth-child(3) {
     text-align: right;            /* Forces "Pricing" to align perfectly over the right-aligned numbers */
-    padding-right: -10px;
 }
 
 /* THE TABLE TBODY ROW DATA CELLS */
