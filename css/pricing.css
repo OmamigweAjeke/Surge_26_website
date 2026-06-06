@@ -80,7 +80,7 @@
     text-align: left;
 }
 
-.pricing-table th:last-child {
+.pricing-table th:nth-child(3) {
     text-align: right;            /* Forces "Pricing" to align perfectly over the right-aligned numbers */
 }
 
@@ -112,7 +112,6 @@
     font-size: 1.15rem;          /* Slightly more compact for a modern timeline look */
     font-weight: 400;
     font-variant-numeric: tabular-nums;
-     text-align: left;     /* Keeps dates aligned neatly opposite the ticket names */
 }
 
 /* MICRO PROMO DECORATION INDICATOR BLOCKS */
